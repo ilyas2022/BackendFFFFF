@@ -1,8 +1,4 @@
-import os
-
-# Configuración de puerto dinámico
-port = os.getenv("PORT", "8080")
-bind = f"0.0.0.0:{port}"
+bind = "0.0.0.0:${PORT:-8080}"  # Esto permite que la variable de entorno se resuelva en el shell
 workers = 4
 threads = 2
 worker_class = "gthread"
