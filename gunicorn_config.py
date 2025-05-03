@@ -1,5 +1,6 @@
-# En tu Dockerfile
+import os
 
+# Configuración de puerto dinámico
 port = os.getenv("PORT", "8080")
 bind = f"0.0.0.0:{port}"
 workers = 4
