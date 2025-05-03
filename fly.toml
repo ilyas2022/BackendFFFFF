@@ -8,14 +8,6 @@ primary_region = 'nrt'
 
 [build]
 
-[env]
-  PORT = "8080"
-  PYTHONUNBUFFERED = "1"
-  REPLICATE_API_TOKEN = "r8_7IfUadQSkl3N2PGZR4HWswF3J55FUfZ0TUiQj"
-  CLOUDINARY_CLOUD_NAME = "dbgwyc5o4"
-  CLOUDINARY_API_KEY = "873135915466665"
-  CLOUDINARY_API_SECRET = "uptiwp7Chfu1Z0SkUaC-iHaSVUE"
-  ALLOWED_ORIGINS = "*"
 
 [http_service]
   internal_port = 8080
