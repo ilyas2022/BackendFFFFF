@@ -1,13 +1,12 @@
 from click import prompt
 import replicate
 import os
-from dotenv import load_dotenv
 
-load_dotenv() #Cargar .env
+# Se eliminó la carga de .env ya que Railway usa variables de entorno del sistema
 
 api_token = os.getenv("REPLICATE_API_TOKEN")
 if not api_token:
-    raise ValueError("REPLICATE_API_TOKEN not found in .env")
+    raise ValueError("REPLICATE_API_TOKEN not found in environment variables")
 
 replicate_client = replicate.Client(api_token=api_token)
 
@@ -30,4 +29,3 @@ def generate_image(image_url: str, prompt: str):
     except Exception as e:
         print(f"Error in generate_image: {str(e)}")
         raise e
-
