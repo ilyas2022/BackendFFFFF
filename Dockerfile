@@ -18,5 +18,5 @@ RUN mkdir -p uploads && chmod 777 uploads
 EXPOSE ${PORT}
 
 # Comando para producción usando Gunicorn
-CMD sh -c "gunicorn --config gunicorn_config.py --bind 0.0.0.0:${PORT} app:app"
+CMD sh -c "gunicorn --config gunicorn_config.py --bind 0.0.0.0:${PORT:-8080} app:app"
 
