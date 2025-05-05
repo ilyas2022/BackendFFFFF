@@ -17,10 +17,10 @@ def generate_image(image_url: str, prompt: str):
             input={
                 "image": image_url,
                 "prompt": prompt,
-                "negative_prompt": "lowres, watermark, banner, logo, contactinfo, text, blurry, surreal, ugly, mirror",
-                "num_inference_steps": 50,
-                "guidance_scale": 15,
-                "prompt_strength": 0.8
+                "negative_prompt":  "lowres, watermark, banner, logo, watermark, contactinfo, text, deformed, blurry, blur, out of focus, out of frame, surreal, extra, ugly, upholstered walls, fabric walls, plush walls, mirror, mirrored, functional, realistic",
+                "guidance_scale": 8.24,
+                "num_inference_steps": 80,
+                "prompt_strength": 0.6
             },
             timeout=300  # Aumentar a 5 minutos
         )
